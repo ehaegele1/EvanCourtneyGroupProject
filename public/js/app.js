@@ -6,7 +6,6 @@ app.controller('MainController', ['$http', function($http){
       method: 'POST',
       url: '/horror',
       data: {
-        title: this.title,
         body: this.body
       }
     }).then(function(response){
