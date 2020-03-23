@@ -25,9 +25,9 @@
               ng-click="ctrl.editsToShow = $index">
               Edit
             </a>
-            
+
           <form ng-if="$index === ctrl.editsToShow" ng-submit="ctrl.updatedBlog(blog)">
-            <textarea name="body" ng-model="ctrl.updatedBody" />
+            <textarea name="body" ng-model="ctrl.updatedBody"></textarea>
             <input type="submit" value="Submit Revision">
           </form>
           </td>

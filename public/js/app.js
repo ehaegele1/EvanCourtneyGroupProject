@@ -44,7 +44,7 @@ app.controller('MainController', ['$http', function($http){
         body: this.updatedBody
       }
     }).then(response => {
-      controller.getBlogs();
+      this.getBlogs();
       controller.editsToShow = null;
       console.log(response.data.body);
     },  error => {
