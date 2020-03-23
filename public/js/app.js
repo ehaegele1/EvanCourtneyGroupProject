@@ -1,6 +1,6 @@
 const app = angular.module('MyApp', []);
 
-app.controllers('MainController', ['$http', function($http){
+app.controller('MainController', ['$http', function($http){
   this.createdBlog = function(){
     $http({
       method: 'POST',
@@ -17,4 +17,4 @@ app.controllers('MainController', ['$http', function($http){
   };
 
 
-});
+}]);
