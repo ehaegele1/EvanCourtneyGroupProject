@@ -45,7 +45,7 @@ app.controller('MainController', ['$http', function($http){
       }
     }).then(response => {
       this.getBlogs();
-      controller.editsToShow = null;
+      this.editsToShow = null;
       console.log(response.data.body);
     },  error => {
       console.log(error);
