@@ -17,10 +17,21 @@
       </form>
       <table>
         <tr ng-repeat="blog in ctrl.bodys">
-          <td>{{blog.body}}</td>
+          <td>{{blog.body}}
 
+            <a
+              ng-if="$index !== ctrl.editsToShow"
+              href="#"
+              ng-click="ctrl.editsToShow = $index">
+              Edit
+            </a>
+            
+          <form ng-if="$index === ctrl.editsToShow" ng-submit="ctrl.updatedBlog(blog)">
+            <textarea name="body" ng-model="ctrl.updatedBody" />
+            <input type="submit" value="Submit Revision">
+          </form>
+          </td>
         </tr>
       </table>
-
   </body>
 </html>
