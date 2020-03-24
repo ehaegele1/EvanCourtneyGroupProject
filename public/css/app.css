@@ -1,0 +1,47 @@
+body{
+  background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190217/pngtree-shining-circle-from-a-classic-horror-movie-[-shining-]-image_2609.jpg);
+  background-size: cover;
+}
+h1{
+  text-align: center;
+  color: white;
+  font-size: 70px;
+}
+h2{
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+p{
+  color: white;
+  font-size: 30px;
+}
+textarea{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 100px;
+}
+img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+input{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+tr{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  justify-content: center;
+}
