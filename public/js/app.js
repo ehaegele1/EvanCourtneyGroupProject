@@ -2,7 +2,9 @@ const app = angular.module('MyApp', []);
 
 app.controller('MainController', ['$http', function($http){
   this.bodys = [];
+  this.editsToShow = null;
 
+//CREATE BLOG
   this.createdBlog = () => {
     $http({
       method: 'POST',
@@ -18,6 +20,7 @@ app.controller('MainController', ['$http', function($http){
     });
   };
 
+//SHOW ALL BLOGS
   this.getBlogs = () => {
     $http({
       method: 'GET',
@@ -31,4 +34,36 @@ app.controller('MainController', ['$http', function($http){
   };
 
   this.getBlogs();
+
+//EDIT
+  this.updatedBlog = function(blog){
+    $http({
+      method: 'PUT',
+      url: '/horror/' + blog._id,
+      data: {
+        body: this.updatedBody
+      }
+    }).then(response => {
+      this.getBlogs();
+      this.editsToShow = null;
+      console.log(response.data.body);
+    },  error => {
+      console.log(error);
+    });
+  };
 }]);
+
+//DELETE
+this.deleteBlog = function(blog){
+  $http({
+    method: 'DELETE',
+    url: '/horror/' + blog._id,
+  }).then(
+    function(){
+      controller.getBlogs()
+    }
+    function(error){
+      
+    }
+  )
+}
